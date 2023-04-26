@@ -3,12 +3,17 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react-hooks/recommended',
-    'prettier'
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module', tsconfigRootDir: __dirname, project: 'tsconfig.json' },
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    tsconfigRootDir: __dirname,
+    project: 'tsconfig.json',
+  },
   plugins: ['react-refresh', 'prettier'],
   rules: {
     'react-refresh/only-export-components': 'warn',
@@ -23,8 +28,8 @@ module.exports = {
         jsxBracketSameLine: false,
         arrowParens: 'always',
         trailingComma: 'none',
-        endOfLine: 'auto'
-      }
-    ]
-  }
+        endOfLine: 'auto',
+      },
+    ],
+  },
 }

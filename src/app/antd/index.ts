@@ -1,0 +1,1 @@
+export { withAntDesign } from './withAntDesign'
