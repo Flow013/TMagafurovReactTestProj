@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly PUNK_API_ROOT_ENDPOINT: string
+  readonly VITE_PUNK_API_ROOT_ENDPOINT: string
   // more env variables...
 }
 

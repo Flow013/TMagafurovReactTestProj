@@ -1,9 +1,14 @@
 import { FC } from 'react'
-import { AppLayout } from '../shared/ui/components/AppLayout'
+import { AppLayout } from '../shared/ui/widgets/AppLayout'
 import { useTranslation } from 'react-i18next'
+import { BeersFeature } from '../features'
 
 export const MainPage: FC = () => {
   const { t } = useTranslation('app')
 
-  return <AppLayout>{t('title')}</AppLayout>
+  return (
+    <AppLayout>
+      <BeersFeature />
+    </AppLayout>
+  )
 }

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { AppLayout } from '../shared/ui/components/AppLayout'
+import { AppLayout } from '../shared/ui/widgets/AppLayout'
 import { Button, Result } from 'antd'
 
 export const NotFoundPage: FC = () => (

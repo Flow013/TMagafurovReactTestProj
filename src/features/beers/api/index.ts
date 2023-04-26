@@ -1,0 +1,1 @@
+export { useBeersGet } from './useBeersGet'

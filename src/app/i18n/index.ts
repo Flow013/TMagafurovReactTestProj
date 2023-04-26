@@ -5,7 +5,7 @@ import { IResources, DefaultNS } from './IResources'
 import { appResources } from './appResources'
 
 const defaultNS: DefaultNS = 'app'
-const fallbackLng = ['ru', 'en'] as const
+export const fallbackLng = ['ru', 'en'] as const
 // Ресурсы которые необходимо подгрузить заранее. Если подгрузка модуля ожидается через lazy, то не добавлять в список
 const localNamespaces = ['app'] as const
 
@@ -21,7 +21,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: fallbackLng as unknown as string[],
+    supportedLngs: fallbackLng as unknown as string[],
     detection: {
       // order and from where user language should be detected
       order: ['cookie', 'navigator', 'header', 'querystring', 'localStorage'],
