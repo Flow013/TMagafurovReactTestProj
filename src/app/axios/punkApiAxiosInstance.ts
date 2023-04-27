@@ -4,5 +4,3 @@ import { configs } from '../configs'
 export const punkApiAxiosInstance = axios.create({
   baseURL: configs.punkApiRootEndpoint
 })
-
-console.log(configs.punkApiRootEndpoint, punkApiAxiosInstance)

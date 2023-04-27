@@ -34,7 +34,7 @@ i18n
       cookieOptions: { path: '/' }
     },
     ns: localNamespaces,
-    defaultNS,
+    // defaultNS,
     resources
   })
   .catch(console.error)
