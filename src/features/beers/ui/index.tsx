@@ -4,6 +4,7 @@ import { Table } from 'antd'
 import { ColumnsType } from 'antd/es/table'
 import { BeerItem } from '../models/BeerItem'
 import { useTranslation } from 'react-i18next'
+import { VirtualTable } from '../../../shared/ui/components/VirtualTable'
 
 export const View: FC = () => {
   const { t, i18n } = useTranslation('features/beers')
@@ -21,11 +22,11 @@ export const View: FC = () => {
   )
   console.log(t('beerItem.id'))
   return (
-    <Table
+    <VirtualTable
       loading={isLoading}
       dataSource={data}
       rowKey="id"
       columns={columns}
-    ></Table>
+    ></VirtualTable>
   )
 }
