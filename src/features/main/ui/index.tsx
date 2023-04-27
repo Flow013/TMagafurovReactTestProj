@@ -18,7 +18,9 @@ export const View: FC<object> = () => {
           </li>
           <li>
             <Link to={'/beers/list'}>
-              <Typography.Link>{t('pageNames.BeersListPage')}</Typography.Link>
+              <Typography.Link delete>
+                {t('pageNames.BeersListPage')}
+              </Typography.Link>
             </Link>
           </li>
         </ul>
