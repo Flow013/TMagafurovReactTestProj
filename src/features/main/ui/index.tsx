@@ -12,15 +12,13 @@ export const View: FC<object> = () => {
       <Paragraph>
         <ul>
           <li>
-            <Link to={'/beers/table'}>
-              <Typography.Link>{t('pageNames.BeersTablePage')}</Typography.Link>
-            </Link>
+            <Link to={'/beers/table'}>{t('pageNames.BeersTablePage')}</Link>
           </li>
           <li>
             <Link to={'/beers/list'}>
-              <Typography.Link delete>
+              <Typography.Text delete>
                 {t('pageNames.BeersListPage')}
-              </Typography.Link>
+              </Typography.Text>
             </Link>
           </li>
         </ul>

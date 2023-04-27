@@ -14,7 +14,6 @@ export const useInfiniteScroll = (
   const { loadMoreCallback, loading, hasNextPage } = options || {}
   const [inViewport] = useInViewport(options && target)
   useEffect(() => {
-    console.log(inViewport, loadMoreCallback, !loading, hasNextPage)
     if (inViewport && loadMoreCallback && !loading && hasNextPage) {
       loadMoreCallback()
     }
