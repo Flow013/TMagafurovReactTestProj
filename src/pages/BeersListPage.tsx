@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { AppLayout } from '../shared/ui/widgets/AppLayout'
-import { BeersTableFeature } from '../features'
+import { BeersListFeature } from '../features'
 
-export const BeersTablePage: FC = () => {
+export const BeersListPage: FC = () => {
   return (
     <AppLayout>
-      <BeersTableFeature />
+      <BeersListFeature />
     </AppLayout>
   )
 }

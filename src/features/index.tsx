@@ -6,7 +6,11 @@ const loadableOptions = {
 }
 
 export const MainFeature = loadable(() => import('./main'), loadableOptions)
-export const BeersFeature = loadable(
+export const BeersTableFeature = loadable(
   () => import('./beersTable'),
+  loadableOptions
+)
+export const BeersListFeature = loadable(
+  () => import('./beersList'),
   loadableOptions
 )
