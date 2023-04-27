@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { MainPage, NotFoundPage } from '../../pages'
+import { MainPage, BeersTablePage } from '../../pages'
 import { Spin } from 'antd'
 
 const router = createBrowserRouter([
@@ -8,7 +8,8 @@ const router = createBrowserRouter([
     element: <MainPage />
   },
   {
-    element: <NotFoundPage />
+    path: '/Beers/Table',
+    element: <BeersTablePage />
   }
 ])
 

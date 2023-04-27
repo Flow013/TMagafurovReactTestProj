@@ -1,2 +1,2 @@
 export { MainPage } from './MainPage'
-export { NotFoundPage } from './NotFoundPage'
+export { BeersTablePage } from './BeersTablePage'

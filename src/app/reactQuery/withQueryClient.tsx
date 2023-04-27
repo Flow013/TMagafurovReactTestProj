@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { ReactQueryDevtoolsLazy } from './ReactQueryDevtoolsLazy'
 
 const queryClient = new QueryClient()
 
@@ -9,7 +9,7 @@ export function withQueryClient<
   return (props: TProps) => (
     <QueryClientProvider client={queryClient}>
       <Child {...props} />
-      <ReactQueryDevtools />
+      {import.meta.env.DEV && <ReactQueryDevtoolsLazy />}
     </QueryClientProvider>
   )
 }

@@ -5,4 +5,5 @@ const loadableOptions = {
   fallback: <MainSpin />
 }
 
+export const MainFeature = loadable(() => import('./main'), loadableOptions)
 export const BeersFeature = loadable(() => import('./beers'), loadableOptions)
