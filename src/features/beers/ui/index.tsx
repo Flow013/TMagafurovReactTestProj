@@ -7,7 +7,7 @@ import { IUseInfiniteScrollOptions } from '../../../shared/hooks/useInfiniteScro
 import { useColumns } from './useColumns'
 
 export const View: FC<object> = () => {
-  const { t } = useTranslation('features/beers')
+  const { t } = useTranslation('feature/beersTable')
   const { dataSource, isLoading, isError, error, fetchNextPage, hasNextPage } =
     useGetBeers()
 

@@ -2,10 +2,11 @@ import { useMemo } from 'react'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { punkApiAxiosInstance } from '../../../app/axios/punkApiAxiosInstance'
 import { BeerItem } from '../models/BeerItem'
+import { BeersTableKey } from '../constants'
 
 export function useGetBeers(pageSize = 50) {
   const infiniteScrollResults = useInfiniteQuery({
-    queryKey: ['beers'],
+    queryKey: [BeersTableKey],
     queryFn: async ({ signal, pageParam = 1 }) => {
       return await punkApiAxiosInstance
         .get<BeerItem[]>('/beers', {
