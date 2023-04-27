@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const { Title, Paragraph } = Typography
 export const View: FC<object> = () => {
-  const { t } = useTranslation('features/main')
+  const { t } = useTranslation('feature/main')
   return (
     <Typography>
       <Title>{t('title')}</Title>

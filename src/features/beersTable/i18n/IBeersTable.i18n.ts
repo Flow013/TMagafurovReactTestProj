@@ -5,7 +5,7 @@ interface IBeerItemLabels {
   image_url: string
 }
 
-export interface IBeersI18n {
+export interface IBeersTableI18n {
   title: string
   dataLoadError: string
   beerItem: IBeerItemLabels
