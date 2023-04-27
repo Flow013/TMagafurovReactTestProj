@@ -1,2 +1,2 @@
 export type MainKeyType = 'feature/main'
-export const beersListKey: MainKeyType = 'feature/main'
+export const mainKey: MainKeyType = 'feature/main'
