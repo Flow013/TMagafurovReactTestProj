@@ -47,6 +47,20 @@ npm run dev
 npm run build
 ```
 
+### Запуск в Docker
+
+#### Development
+
+```sh
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build --renew-anon-volumes
+```
+
+#### Production
+
+```sh
+docker-compose -f docker-compose.yml up --build
+```
+
 ### Архитектура
 
 В основе проекта использована архитектура [Feature-Sliced Design](https://feature-sliced.design/). По структуре проекта предлагаю ознакомится [по ссылке.](https://feature-sliced.design/docs/reference/layers).
