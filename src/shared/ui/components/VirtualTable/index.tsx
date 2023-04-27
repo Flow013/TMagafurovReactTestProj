@@ -149,7 +149,7 @@ export const VirtualTable = <RecordType extends object>(
         <>
           <Table
             {...props}
-            loading={loading}
+            // loading={loading}
             className="virtual-table"
             columns={mergedColumns}
             pagination={false}
