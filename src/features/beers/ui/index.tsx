@@ -1,32 +1,43 @@
-import { FC, useMemo } from 'react'
-import { useBeersGet } from '../api/useBeersGet'
-import { Table } from 'antd'
-import { ColumnsType } from 'antd/es/table'
-import { BeerItem } from '../models/BeerItem'
+import { FC, useEffect, useMemo } from 'react'
+import { useGetBeers } from '../api/useGetBeers'
 import { useTranslation } from 'react-i18next'
+import { message } from 'antd'
 import { VirtualTable } from '../../../shared/ui/components/VirtualTable'
+import { IUseInfiniteScrollOptions } from '../../../shared/hooks/useInfiniteScroll'
+import { useColumns } from './useColumns'
 
-export const View: FC = () => {
-  const { t, i18n } = useTranslation('features/beers')
-  const { data = [], isLoading } = useBeersGet({ page: 1, per_page: 80 })
+export const View: FC<object> = () => {
+  const { t } = useTranslation('features/beers')
+  const { dataSource, isLoading, isError, error, fetchNextPage, hasNextPage } =
+    useGetBeers()
 
-  const columns = useMemo<ColumnsType<BeerItem>>(
-    () => [
-      { dataIndex: 'id', title: t('beerItem.id') },
-      { dataIndex: 'name', title: t('beerItem.name') },
-      { dataIndex: 'description', title: t('beerItem.description') },
-      { dataIndex: 'image_url', title: t('beerItem.image_url') }
-    ],
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [i18n.language]
+  const infinateScrollProps = useMemo<IUseInfiniteScrollOptions>(
+    () => ({
+      loadMoreCallback: fetchNextPage,
+      loading: isLoading,
+      hasNextPage
+    }),
+    [fetchNextPage, hasNextPage, isLoading]
   )
-  console.log(t('beerItem.id'))
+
+  const { columns } = useColumns()
+
+  useEffect(() => {
+    if (isError) {
+      console.error(error)
+      message.error(t('dataLoadError'))
+    }
+  }, [error, isError, t])
+
   return (
-    <VirtualTable
-      loading={isLoading}
-      dataSource={data}
-      rowKey="id"
-      columns={columns}
-    ></VirtualTable>
+    <>
+      <VirtualTable
+        loading={isLoading}
+        dataSource={dataSource}
+        rowKey="id"
+        columns={columns}
+        infiniteScroll={infinateScrollProps}
+      ></VirtualTable>
+    </>
   )
 }

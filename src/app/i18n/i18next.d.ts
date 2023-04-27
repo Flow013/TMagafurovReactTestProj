@@ -1,4 +1,4 @@
-import { DefaultNS, IResources } from './IResources'
+import type { DefaultNS, IResources } from './IResources'
 
 declare module 'i18next' {
   interface CustomTypeOptions {

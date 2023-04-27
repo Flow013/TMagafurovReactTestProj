@@ -1,3 +1,3 @@
 import './i18n'
 
-export { View as BeersFeature } from './ui'
+export { View as default } from './ui'

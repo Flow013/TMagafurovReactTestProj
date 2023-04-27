@@ -1,4 +1,4 @@
-import { IAppI18n } from './appResources/IApp.i18n'
+import type { IAppI18n } from './appResources/IApp.i18n'
 
 import type { IBeersI18n } from '../../features/beers/i18n/IBeers.i18n'
 

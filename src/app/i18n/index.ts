@@ -1,10 +1,10 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import { IResources, DefaultNS } from './IResources'
+import type { IResources } from './IResources'
 import { appResources } from './appResources'
 
-const defaultNS: DefaultNS = 'app'
+// const defaultNS: DefaultNS = 'app'
 export const fallbackLng = ['ru', 'en'] as const
 // Ресурсы которые необходимо подгрузить заранее. Если подгрузка модуля ожидается через lazy, то не добавлять в список
 const localNamespaces = ['app'] as const

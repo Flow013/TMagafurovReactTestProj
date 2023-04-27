@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { MainPage } from '../../pages/MainPage'
+import { MainPage, NotFoundPage } from '../../pages'
 import { Spin } from 'antd'
-import { NotFoundPage } from '../../pages/NotFoundPage'
 
 const router = createBrowserRouter([
   {

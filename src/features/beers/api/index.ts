@@ -1,1 +1,1 @@
-export { useBeersGet } from './useBeersGet'
+export { useGetBeers as useBeersGet } from './useGetBeers'

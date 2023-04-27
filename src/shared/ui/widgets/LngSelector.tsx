@@ -11,7 +11,6 @@ export const LngSelector: FC = () => {
     (e) => i18n.changeLanguage(e?.target?.value as string),
     [i18n]
   )
-  console.log(i18n.language)
   return (
     <Radio.Group
       options={lngOptions}

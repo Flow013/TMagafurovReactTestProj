@@ -7,5 +7,6 @@ interface IBeerItemLabels {
 
 export interface IBeersI18n {
   title: string
+  dataLoadError: string
   beerItem: IBeerItemLabels
 }
