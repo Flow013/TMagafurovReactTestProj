@@ -1,4 +1,4 @@
-import { Col, Layout, Menu, MenuProps, Row } from 'antd'
+import { Col, Layout, Row } from 'antd'
 import { LngSelector } from '../LngSelector'
 
 // const items1: MenuProps['items'] = ['1', '2', '3'].map((key) => ({
