@@ -5,9 +5,10 @@ services:
     image: 'react-app-test'
     build:
       context: ./
-      target: production-build-stage
+      target: production-deploy-stage
       dockerfile: Dockerfile
-    # ports:
-    #   - '80:80'
+    ports:
+      - '8080:8080'
     restart: 'unless-stopped'
+    stdin_open: true
 

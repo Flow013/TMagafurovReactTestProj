@@ -9,7 +9,8 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "bundle-visualizer": "npx vite-bundle-visualizer -t sunburst",
-    "docker:dev": "docker run --rm -it $(docker build -q --target development-build-stage .)"
+    "docker-compose:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build --renew-anon-volumes",
+    "docker-compose:prod": "docker-compose -f docker-compose.yml up --build"
   },
   "dependencies": {
     "@loadable/component": "^5.15.3",
